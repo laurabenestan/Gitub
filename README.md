@@ -67,12 +67,16 @@ Accept the suggested filename and directory by pressing ``Enter`` and specify a 
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 ``` 
+This command will produce two files:
+- id_rsa — this is your PRIVATE key. Don’t share this with anyone else. 
+- id_rsa.pub — this is your PUBLIC key. You can share it with others.
 
 Then, access to the ```ssh``` key generated to include it into your github/Gitlab account
 ``` bash 
 cat ~/.ssh/id_rsa.pub
 ``` 
 You will see a bunch of code starting by ```ssh-rsa```. Copy all this code.
+
 
 Go to you github account, in the Settings (access from the top-right corner on your image profile).
 Then, in the SSH and GPG keys section, click on ***New SSH key***
@@ -81,5 +85,5 @@ Validate the  ***New SSH key***.
 
 ## How to generate a token for your github account?
 
-
-cat ~/.ssh/id_rsa.pub
+Follow this link: https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token.
+You will always use your token as the password after performing ```git push``` command.
